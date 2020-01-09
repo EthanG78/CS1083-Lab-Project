@@ -4,7 +4,8 @@ public class BookmarkList {
 
     public BookmarkList ()
     {
-        list = new Bookmark[5];
+        list = new Bookmark[1];
+        list[0] = new Bookmark(" "," ");
     }
 
     public void addBookmark(Bookmark bookmark)
@@ -35,5 +36,6 @@ public class BookmarkList {
         {
             System.out.println("\t" + list[i]);
         }
+        System.out.println();
     }
 }

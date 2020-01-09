@@ -16,7 +16,15 @@ public class Bookmark
     //Creating a toString method that prints the bookmark list
     public String toString()
     {
-        return ID + ": " + WebAddress;
+        if(ID.equals(" ") || WebAddress.equals(" "))
+        {
+            return "";
+        }
+        else
+        {
+            return ID + ": " + WebAddress;
+        }
+
     }
 
 
