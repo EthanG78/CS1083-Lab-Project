@@ -1,5 +1,3 @@
-package com.lab1;
-
 public class Bookmark
 {
     //Creating ID and WebAddress as Strings
