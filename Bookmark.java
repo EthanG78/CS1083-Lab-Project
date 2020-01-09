@@ -1,3 +1,7 @@
+/**
+ * Bookmark.java
+ * Authors: Ethan Garnier, Albert Stanica & Abdoalah Aboelneil
+ */
 public class Bookmark
 {
     //Creating ID and WebAddress as Strings
@@ -12,20 +16,9 @@ public class Bookmark
 
     }
 
-
     //Creating a toString method that prints the bookmark list
     public String toString()
     {
-        if(ID.equals(" ") || WebAddress.equals(" "))
-        {
-            return "";
-        }
-        else
-        {
-            return ID + ": " + WebAddress;
-        }
-
+        return ID + ": " + WebAddress;
     }
-
-
 }

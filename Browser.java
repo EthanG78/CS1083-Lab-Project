@@ -1,5 +1,8 @@
+/**
+ * Browser.java
+ * Authors: Ethan Garnier, Albert Stanica & Abdoalah Aboelneil
+ */
 import java.util.Scanner;
-
 
 public class Browser {
 
@@ -44,12 +47,12 @@ public class Browser {
         }
 
     }
-     public static void printMenu(){
+
+    public static void printMenu(){
         System.out.println("Menu");
         System.out.println("-------");
-         System.out.println("\t1 - Add Bookmark");
-         System.out.println("\t2 - Print list of Bookmarks");
-         System.out.print("Your choice? (0 to quit) ");
-
+        System.out.println("\t1 - Add Bookmark");
+        System.out.println("\t2 - Print list of Bookmarks");
+        System.out.print("Your choice? (0 to quit) ");
     }
 }
