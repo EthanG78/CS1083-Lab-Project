@@ -28,4 +28,12 @@ public class BookmarkList {
 
         list = temp;
     }
+
+    public void printList()
+    {
+        for (int i = 0; i < list.length; i++)
+        {
+            System.out.println("\t" + list[i]);
+        }
+    }
 }
