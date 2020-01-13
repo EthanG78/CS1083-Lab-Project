@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class Browser {
 
     public static void main(String[] args) {
-
+        // This is a Commitment + Push Test for Github
+        int i = 0;
         Scanner sc = new Scanner(System.in);
         boolean running = true;
         int input;
