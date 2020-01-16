@@ -48,20 +48,6 @@ public class TestBrowser {
                     bookmark_list.printList();
                 }
 
-                if(input == 3){
-                    // Launces the Website
-                    int bookMarkIndex = sc.NextInt();
-
-                    try {
-                        bookmark_list
-
-
-                    }
-                    catch (Exception e){
-
-
-                    }
-                }
 
             }
 

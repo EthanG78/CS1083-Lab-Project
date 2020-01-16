@@ -3,10 +3,9 @@
  * Authors: Ethan Garnier, Albert Stanica & Abdoalah Aboelneil
  * This file is for testing new code before committing to main file.
  */
-package Testing;
 import java.util.Scanner;
 
-public class TestBrowser {
+public class Browser {
 
     public static void main(String[] args) {
 
@@ -15,7 +14,7 @@ public class TestBrowser {
 
         Scanner sc = new Scanner(System.in);
 
-        TestBookmarkList bookmark_list = new TestBookmarkList();
+        BookmarkList bookmark_list = new BookmarkList();
 
         System.out.println("~~~~~~~THIS IS A TEST PROGRAM~~~~~~~");
 
@@ -38,7 +37,7 @@ public class TestBrowser {
                     System.out.print("Web address or file name: ");
                     String url = sc.next();
 
-                    TestBookmark new_bookmark = new TestBookmark(ID, url);
+                    Bookmark new_bookmark = new Bookmark(ID, url);
                     bookmark_list.addBookmark(new_bookmark);
                 }
 
@@ -50,17 +49,17 @@ public class TestBrowser {
 
                 if(input == 3){
                     // Launces the Website
-                    int bookMarkIndex = sc.NextInt();
-
-                    try {
-                        String webAddress = bookmark_list.getBookmark(bookMarkIndex).getWebAddress();
+                    int bookMarkIndex = sc.nextInt();
+                    String webAddress = bookmark_list.getBookmark(bookMarkIndex).getWebAddress();
+                    System.out.println(webAddress);
+                    /*try {
 
 
                     }
                     catch (Exception e){
                         System.out.println("It didnt work");
 
-                    }
+                    }*/
                 }
 
             }
