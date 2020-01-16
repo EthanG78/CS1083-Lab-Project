@@ -39,7 +39,12 @@ public class BookmarkList
     }
 
     public Bookmark getBookmark(int index){
-        return list[index];
+        if(index < nBookmarks)
+        {
+            return list[index];
+        }
+
+        return null;
     }
 
     public void printList()
