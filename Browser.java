@@ -13,6 +13,8 @@ public class Browser {
 
         Scanner sc = new Scanner(System.in);
 
+        Runtime runtime = Runtime.getRuntime();
+
         BookmarkList bookmark_list = new BookmarkList();
 
         while (running) {
@@ -47,7 +49,7 @@ public class Browser {
                 if(input == 3){
                     // Launces the Website
                     System.out.print("Which bookmark do you want to display? ");
-                    String webAddress, ID;
+                    String webAddress, ID, command;
 
                     int bookMarkIndex = sc.nextInt();
                     if(bookmark_list.getBookmark(bookMarkIndex) == null)
@@ -58,14 +60,27 @@ public class Browser {
                     {
                         webAddress = bookmark_list.getBookmark(bookMarkIndex).getWebAddress();
                         ID = bookmark_list.getBookmark(bookMarkIndex).getID();
+
+
                         System.out.println("Displaying " + ID + "...");
-                        if (webAddress.substring(webAddress.length() - 4, webAddress.length()).equals(".pdf"))
+
+                        try
                         {
-                            System.out.println("PDF");
+                            if (webAddress.endsWith(".pdf"))
+                            {
+                                command = "C:\\Program Files (x86)\\Adobe\\Acrobat Reader DC\\Reader\\AcroRd32 " + webAddress;
+                                runtime.exec(command);
+                            }
+                            else
+                            {
+                                command = "C:\\Program Files (x86)\\Internet Explorer\\iexplore " + webAddress;
+                                //command = "firefox " + webAddress;
+                                runtime.exec(command);
+                            }
                         }
-                        else
+                        catch (Exception e)
                         {
-                            System.out.println("NOT PDF");
+
                         }
                     }
 
