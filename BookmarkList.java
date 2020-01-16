@@ -49,7 +49,7 @@ public class BookmarkList
             //If the object is not null (bookmark exists), print the bookmark
             if (list[i] != null)
             {
-                System.out.println("\t" + list[i]);
+                System.out.println("\t" + (i+1) + ")" + list[i]);
             }
         }
         System.out.println();

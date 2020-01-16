@@ -49,9 +49,14 @@ public class Browser {
 
                 if(input == 3){
                     // Launces the Website
+                    System.out.print("Which bookmark do you want to display? ");
+
                     int bookMarkIndex = sc.nextInt();
                     String webAddress = bookmark_list.getBookmark(bookMarkIndex).getWebAddress();
-                    System.out.println(webAddress);
+                    String ID = bookmark_list.getBookmark(bookMarkIndex).getID();
+
+                    System.out.println("Displaying " + ID + "...");
+
                     /*try {
 
 
