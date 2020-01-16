@@ -48,6 +48,21 @@ public class TestBrowser {
                     bookmark_list.printList();
                 }
 
+                if(input == 3){
+                    // Launces the Website
+                    int bookMarkIndex = sc.NextInt();
+
+                    try {
+                        bookmark_list
+
+
+                    }
+                    catch (Exception e){
+
+
+                    }
+                }
+
             }
 
         }
@@ -59,6 +74,7 @@ public class TestBrowser {
         System.out.println("-------");
         System.out.println("\t1 - Add Bookmark");
         System.out.println("\t2 - Print list of Bookmarks");
+        System.out.println("\t3 - Display a Bookmark");
         System.out.print("Your choice? (0 to quit) ");
     }
 }

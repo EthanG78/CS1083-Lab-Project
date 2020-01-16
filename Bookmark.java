@@ -16,6 +16,10 @@ public class Bookmark
 
     }
 
+    public String getWebAddress(){
+        return WebAddress;
+    }
+
     //Creating a toString method that prints the bookmark list
     public String toString()
     {

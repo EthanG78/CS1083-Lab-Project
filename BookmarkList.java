@@ -38,6 +38,10 @@ public class BookmarkList
         list = temp;
     }
 
+    public Bookmark getBookmark(int index){
+        return list[index];
+    }
+
     public void printList()
     {
         for (int i = 0; i < list.length; i++)

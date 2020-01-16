@@ -1,10 +1,12 @@
 /**
  * Browser.java
  * Authors: Ethan Garnier, Albert Stanica & Abdoalah Aboelneil
+ * This file is for testing new code before committing to main file.
  */
+package Testing;
 import java.util.Scanner;
 
-public class Browser {
+public class TestBrowser {
 
     public static void main(String[] args) {
 
@@ -13,7 +15,9 @@ public class Browser {
 
         Scanner sc = new Scanner(System.in);
 
-        BookmarkList bookmark_list = new BookmarkList();
+        TestBookmarkList bookmark_list = new TestBookmarkList();
+
+        System.out.println("~~~~~~~THIS IS A TEST PROGRAM~~~~~~~");
 
         while (running) {
             printMenu();
@@ -34,7 +38,7 @@ public class Browser {
                     System.out.print("Web address or file name: ");
                     String url = sc.next();
 
-                    Bookmark new_bookmark = new Bookmark(ID, url);
+                    TestBookmark new_bookmark = new TestBookmark(ID, url);
                     bookmark_list.addBookmark(new_bookmark);
                 }
 
@@ -42,6 +46,21 @@ public class Browser {
                     //Printout Bookmark
                     System.out.println("Bookmark list: ");
                     bookmark_list.printList();
+                }
+
+                if(input == 3){
+                    // Launces the Website
+                    int bookMarkIndex = sc.NextInt();
+
+                    try {
+                        String webAddress = bookmark_list.getBookmark(bookMarkIndex).getWebAddress();
+
+
+                    }
+                    catch (Exception e){
+                        System.out.println("It didnt work");
+
+                    }
                 }
 
             }
@@ -55,6 +74,7 @@ public class Browser {
         System.out.println("-------");
         System.out.println("\t1 - Add Bookmark");
         System.out.println("\t2 - Print list of Bookmarks");
+        System.out.println("\t3 - Display a Bookmark");
         System.out.print("Your choice? (0 to quit) ");
     }
 }
