@@ -54,15 +54,23 @@ public class Browser {
                     int bookMarkIndex = sc.nextInt();
                     String webAddress = bookmark_list.getBookmark(bookMarkIndex).getWebAddress();
                     String ID = bookmark_list.getBookmark(bookMarkIndex).getID();
-
                     System.out.println("Displaying " + ID + "...");
+                    if (webAddress.substring(webAddress.length() - 4, webAddress.length()).equals(".pdf")){
+                        System.out.print("Im A PDF");
+
+                    }
+                    else{
+                        System.out.println("I am a website");
+
+                    }
+
 
                     /*try {
 
 
                     }
                     catch (Exception e){
-                        System.out.println("It didnt work");
+                        System.out.println("It didn't work");
 
                     }*/
                 }
