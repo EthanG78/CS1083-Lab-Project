@@ -105,8 +105,25 @@ public class Browser {
                     String keyword = sc.next();
 
                     Bookmark bm = bookmark_list.searchID(keyword);
+                    address = bm.getWebAddress();
 
-                    System.out.println(bm);
+                    try
+                    {
+                        if (address.endsWith(".pdf"))
+                        {
+                            command = "C:\\Program Files (x86)\\Adobe\\Acrobat Reader DC\\Reader\\AcroRd32 " + address;
+                            runtime.exec(command);
+                        }
+                        else
+                        {
+                            command = "C:\\Program Files (x86)\\Internet Explorer\\iexplore " + address;
+                            runtime.exec(command);
+                        }
+                    }
+                    catch (Exception e)
+                    {
+
+                    }
                 }
 
             }
