@@ -91,6 +91,16 @@ public class Browser {
 
                 }
 
+                if (input == 4)
+                {
+                    String[] ids = bookmark_list.getIDArray();
+
+                    for (String id: ids)
+                    {
+                        System.out.println("\t" + id);
+                    }
+                }
+
             }
 
         }
@@ -102,7 +112,8 @@ public class Browser {
         System.out.println("-------");
         System.out.println("\t1 - Add Bookmark");
         System.out.println("\t2 - Print list of Bookmarks");
-        System.out.println("\t3 - Display a Bookmark");
+        System.out.println("\t3 - Display a Bookmark (by index)");
+        System.out.println("\t4 - Display a Bookmark (by keyword)");
         System.out.print("Your choice? (0 to quit) ");
     }
 }

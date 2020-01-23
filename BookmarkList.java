@@ -38,13 +38,25 @@ public class BookmarkList
         list = temp;
     }
 
-    public Bookmark getBookmark(int index){
+    public Bookmark getBookmark(int index)
+    {
         if(index < nBookmarks)
         {
             return list[index];
         }
 
         return null;
+    }
+
+    public String[] getIDArray()
+    {
+        String[] ids = new String[nBookmarks];
+        for (int i = 0; i < nBookmarks; i++)
+        {
+            ids[i] = list[i].getID();
+        }
+
+        return ids;
     }
 
     public void printList()
