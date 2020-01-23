@@ -99,6 +99,14 @@ public class Browser {
                     {
                         System.out.println("\t" + id);
                     }
+
+                    System.out.print("Which bookmark (keyword) do you want to display? ");
+
+                    String keyword = sc.next();
+
+                    Bookmark bm = bookmark_list.searchID(keyword);
+
+                    System.out.println(bm);
                 }
 
             }
