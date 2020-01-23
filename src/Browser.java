@@ -105,6 +105,12 @@ public class Browser {
                     String keyword = sc.next();
 
                     Bookmark bm = bookmark_list.searchID(keyword);
+
+                    if (bm == null)
+                    {
+                        System.out.println("That bookmark doesn't exist");
+                    }
+
                     address = bm.getWebAddress();
 
                     try
