@@ -47,6 +47,15 @@ public class BookmarkList
         return null;
     }
 
+    public Bookmark searchID(String ID) {
+        for (int z = 0; z < list.length; z++) {
+            if (list[z].getID().equals(ID)) {
+                return getBookmark(z);
+            }
+        }
+        return null;
+    }
+
     public void printList()
     {
         for (int i = 0; i < list.length; i++)
