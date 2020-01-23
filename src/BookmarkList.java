@@ -47,6 +47,17 @@ public class BookmarkList
         return null;
     }
 
+    public String[] getIDArray()
+    {
+        String[] ids = new String[nBookmarks];
+        for (int i = 0; i < nBookmarks; i++)
+        {
+            ids[i] = list[i].getID();
+        }
+
+        return ids;
+    }
+
     public Bookmark searchID(String ID) {
         for (int z = 0; z < list.length; z++) {
             if (list[z].getID().equals(ID)) {
