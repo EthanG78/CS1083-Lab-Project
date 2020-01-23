@@ -38,8 +38,7 @@ public class BookmarkList
         list = temp;
     }
 
-    public Bookmark getBookmark(int index)
-    {
+    public Bookmark getBookmark(int index){
         if(index < nBookmarks)
         {
             return list[index];
@@ -48,15 +47,13 @@ public class BookmarkList
         return null;
     }
 
-    public String[] getIDArray()
-    {
-        String[] ids = new String[nBookmarks];
-        for (int i = 0; i < nBookmarks; i++)
-        {
-            ids[i] = list[i].getID();
+    public Bookmark searchID(String ID) {
+        for (int z = 0; z < list.length; z++) {
+            if (list[z].getID().equals(ID)) {
+                return getBookmark(z);
+            }
         }
-
-        return ids;
+        return null;
     }
 
     public void printList()
