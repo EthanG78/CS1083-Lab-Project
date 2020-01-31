@@ -26,13 +26,13 @@ public class Browser {
 
             input = sc.nextInt();
 
-            if (input == 0)
+            switch (input)
             {
-                running = false;
-            }
-            else {
-                if(input == 1)
-                {
+                case 0:
+                    running = false;
+                    break;
+
+                case 1:
                     // Add Bookmark
                     System.out.print("ID for the bookmark: ");
                     ID = sc.next();
@@ -42,16 +42,15 @@ public class Browser {
 
                     Bookmark new_bookmark = new Bookmark(ID, url);
                     bookmark_list.addBookmark(new_bookmark);
-                }
+                    break;
 
-                if(input == 2)
-                {
+                case 2:
                     //Printout Bookmark
                     System.out.println("Bookmark list: ");
                     bookmark_list.printList();
-                }
+                    break;
 
-                if(input == 3){
+                case 3:
                     // Launches the Website
                     System.out.print("Which bookmark do you want to display? ");
 
@@ -87,12 +86,9 @@ public class Browser {
 
                         }
                     }
+                    break;
 
-
-                }
-
-                if (input == 4)
-                {
+                case 4:
                     String[] ids = bookmark_list.getIDArray();
 
                     for (String id: ids)
@@ -130,12 +126,14 @@ public class Browser {
                     {
 
                     }
-                }
+                    break;
+
+                default:
+                    System.out.println("Please enter a valid option");
+                    break;
 
             }
-
         }
-
     }
 
     private static void printMenu(){
